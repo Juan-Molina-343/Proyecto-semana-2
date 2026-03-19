@@ -2,7 +2,7 @@
 
 
 PARA CLONAR
-git clone https://github.com/ergrato-dev/bc-react.git
+git clone https://github.com/Juan-Molina-343/Proyecto-semana-2.git
 cd bc-react
 
 ## Resumen
