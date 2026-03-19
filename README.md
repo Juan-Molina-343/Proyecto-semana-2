@@ -1,5 +1,10 @@
 # Proyecto Semana 02 — Sistema CRUD Básico
 
+
+PARA CLONAR
+git clone https://github.com/ergrato-dev/bc-react.git
+cd bc-react
+
 ## Resumen
 Proyecto de la semana 02: sistema CRUD básico implementado con **React + TypeScript + Vite**. Interfaz con lista de items (nombre, email, plan, fecha) y acciones para crear, editar y eliminar.
 
