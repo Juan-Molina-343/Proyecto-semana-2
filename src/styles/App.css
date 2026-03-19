@@ -1,3 +1,9 @@
+/* 
+Por qué: define los colores, tipografías y estilos globales para que la app tenga una apariencia coherente.
+Para qué: aplicar un tema renovado a toda la interfaz (fondos, tarjetas, botones, formularios y responsividad).
+Consecuencia: si falta o está desordenado, la UI se verá inconsistente; con este CSS la app luce profesional y usable.
+*/
+
 /* global.css - tema renovado */
 :root{
   --bg: #071428;            /* fondo principal */

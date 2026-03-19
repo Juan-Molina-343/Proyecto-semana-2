@@ -2,3 +2,7 @@ node_modules/
 dist/
 .env
 .vscode/
+
+# Por qué: evitar subir dependencias, builds y archivos locales al repo.
+# Para qué: mantener el repositorio limpio y liviano (node_modules, dist, .env, .vscode).
+# Consecuencia: si no se ignoran, el repo crece y puede filtrar datos sensibles; con .gitignore, todo queda ordenado.

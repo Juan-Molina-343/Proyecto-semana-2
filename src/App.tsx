@@ -33,3 +33,10 @@ export const App: React.FC = () => {
     </div>
   );
 };
+
+
+/*
+Por qué: coordina el estado y conecta los componentes (Header, ItemForm, ItemList).
+Para qué: permitir crear, editar, eliminar y listar miembros desde una sola vista.
+Consecuencia: si falla, la app no podrá gestionar miembros; si funciona, el CRUD queda operativo.
+*/

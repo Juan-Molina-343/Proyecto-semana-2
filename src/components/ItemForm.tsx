@@ -9,9 +9,11 @@ interface Props {
 
 const initial = { name: '', email: '', plan: 'basico' as Plan, startDate: new Date().toISOString(), active: true };
 
+// Formulario para crear/editar un miembro
 export const ItemForm: React.FC<Props> = ({ onSave, editing, onCancel }) => {
   const [form, setForm] = useState<Omit<Member, 'id'>>(initial);
 
+  // Si hay un miembro en edición, cargar sus datos en el formulario
   useEffect(() => {
     if (editing) {
       const { id, ...rest } = editing;
@@ -21,11 +23,13 @@ export const ItemForm: React.FC<Props> = ({ onSave, editing, onCancel }) => {
     }
   }, [editing]);
 
+  // Maneja cambios en inputs y select
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value, type, checked } = e.target as HTMLInputElement;
     setForm(prev => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
   };
 
+   // Enviar formulario: validar y llamar a onSave
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim()) {
@@ -54,3 +58,9 @@ export const ItemForm: React.FC<Props> = ({ onSave, editing, onCancel }) => {
     </form>
   );
 };
+
+/*
+Por qué: muestra un formulario para ingresar o editar los datos de un miembro.
+Para qué: permitir crear o actualizar miembros y enviar los datos al estado padre.
+Consecuencia: si no existe este formulario, no se pueden añadir ni modificar miembros; si funciona bien, facilita la gestión del CRUD.
+*/
